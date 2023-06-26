@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @movie %>
+
+
+
+<div class="container  form-control border-2 mt-5" style="background-color: #e3f2fd;">
+  <%= link_to "Edit this movie", edit_movie_path(@movie) %> |
+  <%= link_to "Back to movies", movies_path %>
+
+  <%= button_to "Destroy this movie", @movie, method: :delete %>
+</div>

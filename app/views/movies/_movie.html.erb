@@ -1,0 +1,12 @@
+
+  <div class="col-3 py-2 ">
+    <div class="card border border-2 rounded">
+      <div class="card-body">
+        <h5 class="card-title"><%= movie.name %></h5>
+        <%= link_to "Show this movie", movie, class: "fs-6 btn btn-secondary" %>
+        <% picsum_url = "https://biggsinstitute.org/wp-content/uploads/sites/31/2018/09/200x300-155x233.png" %>
+        <img class="my-3" src="<%= picsum_url %>" />
+      </div>
+    </div>
+  </div>
+

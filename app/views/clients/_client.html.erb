@@ -1,0 +1,18 @@
+<div id="<%= dom_id client %>">
+	
+  <tr>
+    <th scope="row"><%= client.id %></th>
+    <td><%= client.name %></td>
+    <td><%= client.age %></td>
+    <td>
+    	<% if client.movies.last.present? %>
+      	<%= client.movies.last %>
+      <% else %>
+      	Usa Nerdflix
+      <% end %>	
+    </td>
+    <td><%= link_to "Show this client", client %></td>
+    <td><%= link_to "Edit this client", edit_client_path(client) %></td>
+    <td><%= button_to "Eliminar Datos", client, method: :delete, class: "rounded text-danger border-bottom border-danger" %></td>
+  </tr>
+</div>
