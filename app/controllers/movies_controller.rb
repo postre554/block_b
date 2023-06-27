@@ -44,7 +44,7 @@ class MoviesController < ApplicationController
     respond_to do |format|
 
       if params[:movie][:client_id].nil?
-        @movie.assign.attributes(movie_params.merge(client_id: nill))
+        @movie.assign.attributes(movie_params.merge(client_id: nil))
       end
 
 
