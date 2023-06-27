@@ -1,2 +1,26 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+
+@font-face {
+  font-family: 'Machine';
+  src: url('MachineStd.otf') format('opentype');
+}
+
+
+.machine-font {
+  font-family: 'Machine', sans-serif;
+  color: #ffd200;
+}
+.machine-font:hover{
+	color: #ffffff;
+}
+
+.bg_marca{
+	background-color: #002392;
+
+}
+
+.navegalink{
+	color: #d7e2ec;
+}
