@@ -21,7 +21,7 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
     #@clients = Client.where.not(id: Movie.where.not(client_id: nil).pluck(:client_id)).pluck(:name)
     @clients = Client.all.pluck :name, :id
-    @clients << ["Liberar_Pelicula", '']
+    @clients << ["Liberar_Pelicula", 'nil']
   end
 
   # POST /movies or /movies.json
