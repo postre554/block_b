@@ -19,9 +19,9 @@ class MoviesController < ApplicationController
   # GET /movies/1/edit
   def edit
     @movie = Movie.find(params[:id])
+    @clients = Client.where.not(id: Movie.where.not(client_id: nil).pluck(:client_id)).pluck(:name)
     @clients = Client.all.pluck :name, :id
     @clients << ["Liberar_Pelicula", nil]
-    @clients = Client.where.not(id: Movie.where.not(client_id: nil).pluck(:client_id)).pluck(:name)
   end
 
   # POST /movies or /movies.json
