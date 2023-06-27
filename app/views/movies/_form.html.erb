@@ -27,18 +27,8 @@
 
   <div>
     <%= form.label :client_id, style: "display: block" %>
-    <%= form.select :client_id do %>
-      <% @clients.each do |client| %>
-        <% if Movie.where(client_id: client[1]).exists? %>
-          <%= content_tag(:option, "#{client[0]}**", value: client[1]) %>
-        <% else %>
-          <%= content_tag(:option, client[0], value: client[1]) %>
-        <% end %>
-      <% end %>
-    <% end %>
+    <%= form.select :client_id, options_for_select(@clients) %>
   </div>
-
-
 
 
   <div>
